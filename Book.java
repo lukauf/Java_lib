@@ -8,8 +8,8 @@ public class Book {
     private int borrowedById = -1; // -1 indica que não está emprestado
     
     public Book(String title, String author_name, int year, int ID, boolean dirty){ //constructor is used when we instantiate a class
-        this.title = title;//this sinalizes that we are refering to the class parameter 
-        this.author_name = author_name;//without "this" we are refering to the constructor parameter 
+        this.title = title;//"this" sinalizes that we are refering to the class atribute 
+        this.author_name = author_name;//without "this" we are refering to the constructor local parameter 
         this.year = year;
         this.ID = ID;
         this.dirty = dirty;
@@ -25,6 +25,10 @@ public class Book {
     
     public int getYear(){
         return year;
+    }
+
+    public int getID(){
+        return ID;
     }
     
     public boolean isDirty(){
@@ -59,5 +63,9 @@ public class Book {
 
     public int getBorrowedById() {
         return borrowedById;
+    }
+
+    public void setTitle(){
+
     }
 }
